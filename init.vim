@@ -91,6 +91,8 @@ nnoremap <C-b> <C-^>
 " copy current filename into system clipboard - mnemonic: (c)urrent(f)ilename
 nnoremap <silent> ,cf :let @* = expand("%:~")<CR>
 
+set clipboard=unnamed
+
 "" Load Vundle Plugins
 if filereadable(expand("~/.vim/vundles.vim"))
 	source ~/.vim/vundles.vim
