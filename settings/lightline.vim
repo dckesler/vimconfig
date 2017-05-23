@@ -11,8 +11,6 @@ let g:lightline = {
 			\   'readonly': 'MyReadonly',
 			\   'filename': 'MyFilename',
 			\ },
-			\ 'separator': { 'left': '⮀', 'right': '⮂' },
-			\ 'subseparator': { 'left': '⮁', 'right': '⮃' }
 			\ }
 
 function! MyReadonly()
