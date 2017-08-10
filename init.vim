@@ -110,7 +110,7 @@ endfor
 " add your own color schemes.
 " Anything inside ~/.vim/colors is an
 " available colorscheme 
-colorscheme spring-night
+colorscheme deus
 set background=dark
 
 nnoremap <C-p> :call FlashCurrentLine()<CR>
