@@ -7,6 +7,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 "Start Vundle
 call vundle#begin()
 "" Add vundle packages here
+Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 
 " Vundle loads vundle
 Plugin 'VundleVim/Vundle.vim'

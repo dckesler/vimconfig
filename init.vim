@@ -12,6 +12,9 @@ set noswapfile
 set nobackup
 set nowb
 
+" Mel's custom stuff
+set number relativenumber
+
 " Keeps undo history across sessions by storing in a file
 if has('persistent_undo') && !isdirectory(expand('~').'/.vim/backups')
   silent !mkdir ~/.vim/backups > /dev/null 2>&1
@@ -110,7 +113,7 @@ endfor
 " add your own color schemes.
 " Anything inside ~/.vim/colors is an
 " available colorscheme 
-colorscheme one
+colorscheme hybrid
 set background=dark
 
 nnoremap <C-p> :call FlashCurrentLine()<CR>
