@@ -15,6 +15,7 @@ map ,' ysiw'
 map ,( ysiw)
 map ,[ ysiw]
 map ,{ ysiw}
+map ,} ysiw{
 map ,` ysiw`
 
 " The rest of this is not actually part of vim-surround but it's the same purpose
