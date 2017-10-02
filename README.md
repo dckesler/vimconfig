@@ -1,13 +1,20 @@
-#Current setup for vim and tmux
+# Current setup for vim and tmux
 
-##Installing
-- Run `git clone git@github.com:CanopyTax/cp-dotfiles.git ~/.vim`  
+## Installing
+- Run `git clone https://github.com/dckesler/vimconfig.git ~/.vim`
+- (Or the git address of your fork if you forked this)
 
-init.vim should by symlinked to .vimrc  
-- Run `ln -s ~/.vim/init.vim ~/.vimrc`  
+init.vim should be symlinked to .vimrc
+- Run `ln -s ~/.vim/init.vim ~/.vimrc`
 
-tmux.conf should be symlinked to ~/.tmux.conf  
-- Run `ln -s ~/.vim/tmux.conf ~/.tmux.conf`  
+You need tmux
+- Run `brew install tmux`
+
+Install this to have tmux and your clipboard be friends
+- Run `brew install reattach-to-user-namespace`
+
+tmux.conf should be symlinked to ~/.tmux.conf
+- Run `ln -s ~/.vim/tmux.conf ~/.tmux.conf`
 
 Install vundle
 - Run `git clone https://github.com/VundleVim/Vundle.Vim ~/.vim/bundle/Vundle.vim`
@@ -15,11 +22,28 @@ Install vundle
 Install Silver Searcher
 - Run `brew install the_silver_searcher`
 
-##NeoVim
-###Installing neovim - (On Mac)
+Install FZF for fuzzy searching
+- Run `brew install fzf`
+- You'll see a helpful hint at the end something like
+```
+To install useful keybindings and fuzzy completion:
+  /usr/local/opt/fzf/install
+```
+- Run that and agree to the three questions
+- Finally add this line to your shell config
+`export FZF_DEFAULT_COMMAND='ag -g ""'`
+- That line makes it so FZF will respect your `.gitignore` when searching
+
+Install your vim plugins
+- Inside of vim type `:PluginInstall`
+- This makes Vundle go through and install all the plugins
+
+## NeoVim
+### Installing neovim - (On Mac)
 - `brew install neovim/neovim/neovim`
 
-The command `nvim` should exist now, you could alias `vim` to `nvim` if you want  
+The command `nvim` should exist now, you could alias `vim` to `nvim` if you want.
+
 Now you'll want python3 enabled for neovim to use the autocomplete functionality
 - If you don't have python3 run `brew install python3`
 - You should now have pip3
@@ -29,17 +53,24 @@ Now you'll want python3 enabled for neovim to use the autocomplete functionality
 - Now run `:UpdateRemotePlugins` to enable deoplete (the autocomplete plugin)
 - If it returns `0` this page could help https://github.com/zchee/deoplete-jedi/wiki/Setting-up-Python-for-Neovim
 
-Now you need neovim to run your vim settings  
+Now you need neovim to run your vim settings
 - Run `mkdir ~/.config` (Unless you already have said directory)
 
 Now symlink a `nvim` directory in here to your `.vim` directory (this repo)
 - Run `ln -s ~/.vim ~/.config/nvim`
 
-###ctrl+h tmux bug
+You may also want to edit your `.gitconfig` to use nvim as your editor
+- Add these lines
+```
+[core]
+	editor = nvim
+```
+
+### ctrl+h tmux bug
 If you're setting up NeoVim on Mac for the first time you should run the commands
 ```
 infocmp $TERM | sed 's/kbs=^[hH]/kbs=\\177/' > $TERM.ti
 tic $TERM.ti
 ```
-As per https://github.com/neovim/neovim/issues/2048#issuecomment-78045837  
+As per https://github.com/neovim/neovim/issues/2048#issuecomment-78045837
 Otherwise `ctrl + h` won't switch between panes in tmux
