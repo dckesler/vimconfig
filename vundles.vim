@@ -8,6 +8,8 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 "" Add vundle packages here
 Plugin 'jeffkreeftmeijer/vim-numbertoggle'
+Plugin 'thoughtbot/vim-rspec'
+Plugin 'jgdavey/tslime.vim'
 
 " Vundle loads vundle
 Plugin 'VundleVim/Vundle.vim'

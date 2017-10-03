@@ -11,7 +11,7 @@ let g:fzf_action = {
 
 " Default fzf layout
 " - down / up / left / right
-let g:fzf_layout = { 'down': '~30%' }
+let g:fzf_layout = { 'down': '~15%' }
 
 " Customize fzf colors to match your color scheme
 let g:fzf_colors =
