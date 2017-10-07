@@ -1,5 +1,5 @@
 " Close vim if the only open pane is NERDTree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " Open the project tree and expose current file in the nerdtree with Ctrl-\
 " " calls NERDTreeFind if NERDTree is active, current window contains a modifiable file, and we're not in vimdiff

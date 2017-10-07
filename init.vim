@@ -22,6 +22,12 @@ map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 
+" tslime
+let g:tslime_always_current_session=1
+let g:tslime_always_current_windwo=1
+
+nmap <C-t>r <Plug>SetTmuxVars
+
 " Keeps undo history across sessions by storing in a file
 if has('persistent_undo') && !isdirectory(expand('~').'/.vim/backups')
   silent !mkdir ~/.vim/backups > /dev/null 2>&1
@@ -120,7 +126,7 @@ endfor
 " add your own color schemes.
 " Anything inside ~/.vim/colors is an
 " available colorscheme 
-colorscheme hybrid
+colorscheme one
 set background=dark
 
 nnoremap <C-p> :call FlashCurrentLine()<CR>
