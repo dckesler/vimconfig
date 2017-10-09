@@ -107,7 +107,7 @@ endfor
 "custom.vim is a file where you can add any extra things
 "you want that you don't want version controlled.
 "for example what colorscheme you decide to use
-so custom.vim
+so ~/.vim/custom.vim
 
 nnoremap <C-p> :call FlashCurrentLine()<CR>
 
