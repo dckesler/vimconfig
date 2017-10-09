@@ -66,6 +66,11 @@ You may also want to edit your `.gitconfig` to use nvim as your editor
 	editor = nvim
 ```
 
+### custom.vim
+`custom.vim` is a non-version-controlled file. Add things here you want outside of git.
+Most likely the first things will be your colorscheme.
+`colorscheme <name>`
+
 ### ctrl+h tmux bug
 If you're setting up NeoVim on Mac for the first time you should run the commands
 ```

@@ -104,14 +104,10 @@ for fpath in split(globpath(vimsettings, '*.vim'), '\n')
 	exe 'source' fpath
 endfor
 
-"" Color Stuff
-" Here is where you set your colorscheme
-" This setup is configured so you manually
-" add your own color schemes.
-" Anything inside ~/.vim/colors is an
-" available colorscheme 
-colorscheme one
-set background=dark
+"custom.vim is a file where you can add any extra things
+"you want that you don't want version controlled.
+"for example what colorscheme you decide to use
+so custom.vim
 
 nnoremap <C-p> :call FlashCurrentLine()<CR>
 
