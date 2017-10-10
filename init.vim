@@ -117,3 +117,22 @@ function! FlashCurrentLine()
 	sleep 300m
 	set nocul
 endfunction
+
+" Replace the register with the pasted value when using 'p' to overwrite text.
+" The vim default behavior is to fill the register with the text you just
+" overwrote.
+function! RestoreRegister()
+  let @" = s:restore_reg
+  if &clipboard == "unnamed"
+      let @* = s:restore_reg
+  endif
+  return ''
+endfunction
+
+function! s:Repl()
+    let s:restore_reg = @"
+    return "p@=RestoreRegister()\<cr>"
+endfunction
+
+" NB: this supports "rp that replaces the selection by the contents of @r
+vnoremap <silent> <expr> p <sid>Repl()
