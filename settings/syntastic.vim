@@ -8,4 +8,5 @@ let g:syntastic_auto_loc_list=1
 let g:syntastic_quiet_messages = {'level': 'warnings'}
 
 let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_ruby_checkers = ['rubocop']
 let g:syntastic_html_tidy_ignore_errors = ['is not recognized!']
