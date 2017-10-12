@@ -125,6 +125,9 @@ endfor
 "for example what colorscheme you decide to use
 so ~/.vim/custom.vim
 
+" increase the foldnest level
+set foldnestmax=5
+
 nnoremap <C-p> :call FlashCurrentLine()<CR>
 
 function! FlashCurrentLine()
