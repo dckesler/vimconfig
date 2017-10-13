@@ -8,6 +8,10 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 "" Add vundle packages here
 
+" Run rspec tests directly from vim to tmux!
+Plugin 'thoughtbot/vim-rspec'
+Plugin 'jgdavey/tslime.vim'
+
 " Vundle loads vundle
 Plugin 'VundleVim/Vundle.vim'
 

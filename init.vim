@@ -104,6 +104,19 @@ for fpath in split(globpath(vimsettings, '*.vim'), '\n')
 	exe 'source' fpath
 endfor
 
+" Configure vim-rspec to work nicely with tslime
+let g:rspec_command = 'call Send_to_Tmux("rspec {spec}\n")'
+let g:tslime_always_current_session=1
+let g:tslime_always_current_windwo=1
+
+nmap <C-t>r <Plug>SetTmuxVars
+
+" vim-rspec mappings
+map <Leader>f :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
+
 "custom.vim is a file where you can add any extra things
 "you want that you don't want version controlled.
 "for example what colorscheme you decide to use
