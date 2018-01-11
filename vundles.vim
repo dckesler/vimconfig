@@ -7,7 +7,8 @@ set rtp+=~/.vim/bundle/Vundle.vim
 "Start Vundle
 call vundle#begin()
 "" Add vundle packages here
-Plugin 'jeffkreeftmeijer/vim-numbertoggle'
+
+" Run rspec tests directly from vim to tmux!
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'jgdavey/tslime.vim'
 
