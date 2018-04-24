@@ -39,7 +39,6 @@ filetype indent on
 " Show trailing whitespace as that dot thing
 set list listchars=tab:\ \ ,trail:·
 
-
 set nowrap
 set linebreak
 
@@ -103,11 +102,6 @@ let vimsettings = '~/.vim/settings'
 for fpath in split(globpath(vimsettings, '*.vim'), '\n')
 	exe 'source' fpath
 endfor
-
-" Configure vim-rspec to work nicely with tslime
-let g:rspec_command = 'call Send_to_Tmux("rspec {spec}\n")'
-let g:tslime_always_current_session=1
-let g:tslime_always_current_windwo=1
 
 nmap <C-t>r <Plug>SetTmuxVars
 
