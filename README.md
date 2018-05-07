@@ -95,7 +95,7 @@ Now you need to load the tmuxifier PATH
 - Add this code to the file
 ```bash
 new_window "example"
-rm_cmd "vim"
+run_cmd "vim"
 
 split_v 20
 split_h 50
