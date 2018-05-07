@@ -79,3 +79,29 @@ tic $TERM.ti
 ```
 As per https://github.com/neovim/neovim/issues/2048#issuecomment-78045837
 Otherwise `ctrl + h` won't switch between panes in tmux
+
+## Tmuxifier
+Tmuxifier is a way to have saved tmux window and session layouts (these instructions work for bash or zsh)
+Check out the project here https://github.com/jimeh/tmuxifier with more in depth instructions
+###Installing Tmuxifier
+- `git clone https://github.com/jimeh/tmuxifier.git ~/.vim/tmuxifier`
+Now you need to load the tmuxifier PATH
+- `echo 'export PATH="$HOME/.vim/tmuxifier/bin:$PATH"' >> <your shell configuration file>`
+- `echo 'eval "$(tmuxifier init -)"' >> <your shell configuration file>`
+
+###Adding tmuxifier window layouts
+- Add a file to `~/.vim/tmuxifier/layouts/`
+- For example `touch ~/.vim/tmuxifier/layouts/example.window.sh`
+- Add this code to the file
+```bash
+new_window "example"
+rm_cmd "vim"
+
+split_v 20
+split_h 50
+split_h 50
+select_pane 2
+split_h 50
+```
+- Then inside of tmux run `tmuxifier load-window example`
+- It should start up something with a large pane opened in vim and 4 smaller panes at the bottom
