@@ -83,13 +83,13 @@ Otherwise `ctrl + h` won't switch between panes in tmux
 ## Tmuxifier
 Tmuxifier is a way to have saved tmux window and session layouts (these instructions work for bash or zsh)
 Check out the project here https://github.com/jimeh/tmuxifier with more in depth instructions
-###Installing Tmuxifier
+### Installing Tmuxifier
 - `git clone https://github.com/jimeh/tmuxifier.git ~/.vim/tmuxifier`
 Now you need to load the tmuxifier PATH
 - `echo 'export PATH="$HOME/.vim/tmuxifier/bin:$PATH"' >> <your shell configuration file>`
 - `echo 'eval "$(tmuxifier init -)"' >> <your shell configuration file>`
 
-###Adding tmuxifier window layouts
+### Adding tmuxifier window layouts
 - Add a file to `~/.vim/tmuxifier/layouts/`
 - For example `touch ~/.vim/tmuxifier/layouts/example.window.sh`
 - Add this code to the file
