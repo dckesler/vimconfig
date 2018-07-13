@@ -84,9 +84,6 @@ nmap <silent> // :nohlsearch<CR>
 nnoremap 0 ^
 nnoremap ^ 0
 
-"Remapping the awkward ctrl+^ to go back to previous file
-nnoremap <C-b> <C-^>
-
 " copy current filename into system clipboard - mnemonic: (c)urrent(f)ilename
 nnoremap <silent> ,cf :let @* = expand("%:~")<CR>
 
