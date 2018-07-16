@@ -4,6 +4,10 @@
 - Run `git clone https://github.com/dckesler/vimconfig.git ~/.vim`
 - (Or the git address of your fork if you forked this)
 
+### Ubuntu Note
+Try linuxbrew http://linuxbrew.sh/
+Currently not all the packages can be installed via `apt-get`
+
 init.vim should be symlinked to .vimrc
 - Run `ln -s ~/.vim/init.vim ~/.vimrc`
 
