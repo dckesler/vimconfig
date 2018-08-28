@@ -43,7 +43,7 @@ set nowrap
 set linebreak
 
 set foldmethod=indent
-set foldnestmax=3
+set foldnestmax=10
 set nofoldenable
 
 set wildmode=list:longest
