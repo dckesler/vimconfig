@@ -27,13 +27,8 @@ Plugin 'sheerun/vim-polyglot'
 " vim-flavored-markdown helps recognize github markdown styles
 Plugin 'jtratner/vim-flavored-markdown'
 Plugin 'chrisbra/Colorizer'
-<<<<<<< HEAD
-"Plugin 'mtscout6/syntastic-local-eslint.vim'
-=======
 Plugin 'scrooloose/syntastic.git'
-Plugin 'mtscout6/syntastic-local-eslint.vim'
-Plugin 'styled-components/vim-styled-components'
->>>>>>> add custom.vim
+"Plugin 'styled-components/vim-styled-components'
 Plugin 'ycm-core/YouCompleteMe'
 Plugin 'prettier/vim-prettier'
 
@@ -53,11 +48,6 @@ Plugin 'tomtom/tlib_vim'
 Plugin 'honza/vim-snippets'
 " Plugin 'Lokaltog/vim-easymotion'
 Plugin 'terryma/vim-multiple-cursors'
-<<<<<<< HEAD
-=======
-" Plugin 'Raimondi/delimitMate'
-"Plugin 'Shougo/deoplete.nvim'
->>>>>>> add custom.vim
 Plugin 'briandoll/change-inside-surroundings.vim'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'tpope/vim-abolish'
