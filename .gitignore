@@ -5,5 +5,4 @@ bundle/*
 sessions
 backups
 zshrc
-colors/*
 tmuxifier
