@@ -4,7 +4,7 @@ set number
 set backspace=indent,eol,start
 set showcmd
 set history=100
-set visualbell
+set novisualbell
 set autoread
 set hidden
 let mapleader=","
@@ -29,8 +29,8 @@ set tabstop=2
 set shiftwidth=2
 
 " Indent with paste
-nnoremap p p=`]<C-o>
-nnoremap P P=`]<C-o>
+"nnoremap p p=`]<C-o>
+"nnoremap P P=`]<C-o>
 
 "Not 100% on what these do
 filetype plugin on
@@ -115,8 +115,6 @@ map <Leader>a :call RunAllSpecs()<CR>
 "you want that you don't want version controlled.
 "for example what colorscheme you decide to use
 so ~/.vim/custom.vim
-
-nnoremap <C-p> :call FlashCurrentLine()<CR>
 
 function! FlashCurrentLine()
 	set cul
