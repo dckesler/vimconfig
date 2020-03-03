@@ -6,5 +6,4 @@ sessions
 backups
 zshrc
 colors/*
-custom.vim
 tmuxifier
