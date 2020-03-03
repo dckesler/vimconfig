@@ -11,6 +11,7 @@ set formatoptions=tcroqj
 map <Leader>w :w<CR>
 nnoremap L J
 
+set foldmethod=indent
 nmap <Space> za
 nnoremap J zj
 nnoremap K zk
