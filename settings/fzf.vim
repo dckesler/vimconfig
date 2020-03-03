@@ -1,7 +1,7 @@
-set rtp+=/usr/local/opt/fzf 
+set rtp+=~/src/fzf
 
-nnoremap <silent> ,t :FZF<CR>
-nnoremap <silent> ,b :Buffers<CR>
+nnoremap <silent> <C-p> :Files<CR>
+nnoremap <silent> <C-b> :Buffers<CR>
 
 " This is the default extra key bindings
 let g:fzf_action = {
