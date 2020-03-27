@@ -44,7 +44,7 @@ set linebreak
 
 set foldmethod=indent
 set foldnestmax=10
-set nofoldenable
+set foldenable
 
 set wildmode=list:longest
 set wildmenu
@@ -115,13 +115,6 @@ map <Leader>a :call RunAllSpecs()<CR>
 "you want that you don't want version controlled.
 "for example what colorscheme you decide to use
 so ~/.vim/custom.vim
-
-function! FlashCurrentLine()
-	set cul
-	redraw
-	sleep 300m
-	set nocul
-endfunction
 
 " Replace the register with the pasted value when using 'p' to overwrite text.
 " The vim default behavior is to fill the register with the text you just

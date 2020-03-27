@@ -9,8 +9,9 @@ call vundle#begin()
 "" Add vundle packages here
 
 " Run rspec tests directly from vim to tmux!
-Plugin 'thoughtbot/vim-rspec'
-Plugin 'jgdavey/tslime.vim'
+"Plugin 'thoughtbot/vim-rspec'
+"Plugin 'jgdavey/tslime.vim'
+Plugin 'tpope/vim-dispatch'
 
 " Vundle loads vundle
 Plugin 'VundleVim/Vundle.vim'
