@@ -8,3 +8,4 @@ zshrc
 colors/*
 custom.vim
 tmuxifier
+*.log

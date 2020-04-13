@@ -11,6 +11,7 @@ let mapleader=","
 set noswapfile
 set nobackup
 set nowb
+syntax on
 
 " Keeps undo history across sessions by storing in a file
 if has('persistent_undo') && !isdirectory(expand('~').'/.vim/backups')
@@ -29,8 +30,8 @@ set tabstop=2
 set shiftwidth=2
 
 " Indent with paste
-nnoremap p p=`]<C-o>
-nnoremap P P=`]<C-o>
+nnoremap p p=`]
+nnoremap P P=`]
 
 "Not 100% on what these do
 filetype plugin on
@@ -82,7 +83,6 @@ nmap <silent> // :nohlsearch<CR>
 "This is so 0 takes you to the first character
 "of a line rather than the very start
 nnoremap 0 ^
-nnoremap ^ 0
 
 "Remapping the awkward ctrl+^ to go back to previous file
 nnoremap <C-b> <C-^>
@@ -92,7 +92,7 @@ nnoremap <silent> ,cf :let @* = expand("%:~")<CR>
 
 set clipboard=unnamed
 
-"" Load Vundle Plugins
+" Load Vundle Plugins
 if filereadable(expand("~/.vim/vundles.vim"))
 	source ~/.vim/vundles.vim
 endif
@@ -105,17 +105,12 @@ endfor
 
 nmap <C-t>r <Plug>SetTmuxVars
 
-" vim-rspec mappings
-map <Leader>f :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
-
 "custom.vim is a file where you can add any extra things
 "you want that you don't want version controlled.
 "for example what colorscheme you decide to use
 so ~/.vim/custom.vim
 
+" Flashes red for if you lost your cursor
 nnoremap <C-p> :call FlashCurrentLine()<CR>
 
 function! FlashCurrentLine()

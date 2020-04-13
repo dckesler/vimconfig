@@ -1,6 +1,10 @@
 # Current setup for vim and tmux
 
-## Installing
+### Install vim with python3 support
+- Easiest way for mac users is to just `brew install vim`
+- Check `vim --version` afterwards and see that somewhere it says `+python3`
+
+## Installing vimconfig
 - Run `git clone https://github.com/dckesler/vimconfig.git ~/.vim`
 - (Or the git address of your fork if you forked this)
 
@@ -42,33 +46,10 @@ Install your vim plugins
 - Inside of vim type `:PluginInstall`
 - This makes Vundle go through and install all the plugins
 
-## NeoVim
-### Installing neovim - (On Mac)
-- `brew install neovim/neovim/neovim`
-
-The command `nvim` should exist now, you could alias `vim` to `nvim` if you want.
-
-Now you'll want python3 enabled for neovim to use the autocomplete functionality
-- If you don't have python3 run `brew install python3`
-- You should now have pip3
-- Run `pip3 install neovim`
-- Run the command `:echo has("python3")` inside of neovim
-- If it returns `1` you're in business
-- Now run `:UpdateRemotePlugins` to enable deoplete (the autocomplete plugin)
-- If it returns `0` this page could help https://github.com/zchee/deoplete-jedi/wiki/Setting-up-Python-for-Neovim
-
-Now you need neovim to run your vim settings
-- Run `mkdir ~/.config` (Unless you already have said directory)
-
-Now symlink a `nvim` directory in here to your `.vim` directory (this repo)
-- Run `ln -s ~/.vim ~/.config/nvim`
-
-You may also want to edit your `.gitconfig` to use nvim as your editor
-- Add these lines
-```
-[core]
-	editor = nvim
-```
+Install YouCompleteMe
+- After running `:PluginInstall` YouCompleteMe will still complain
+- You can follow along the readme [here](https://github.com/ycm-core/YouCompleteMe)
+- Go to the `Installation` at `macOS` or whatever you use. On macOS ignore the part about installing `macvim` though
 
 ### custom.vim
 `custom.vim` is a non-version-controlled file. Add things here you want outside of git.
