@@ -2,9 +2,12 @@
 .init.vim-rplugin~
 .netrwhist
 bundle/*
+custom/*
 sessions
 backups
 zshrc
 colors/*
 custom.vim
+vundles.custom.vim
 tmuxifier
+*.log

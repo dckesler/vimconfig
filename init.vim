@@ -1,4 +1,4 @@
-"" These are native vim settings
+" These are native vim settings
 set nocompatible
 set number
 set backspace=indent,eol,start
@@ -11,6 +11,7 @@ let mapleader=","
 set noswapfile
 set nobackup
 set nowb
+syntax on
 
 " Keeps undo history across sessions by storing in a file
 if has('persistent_undo') && !isdirectory(expand('~').'/.vim/backups')
@@ -19,7 +20,7 @@ if has('persistent_undo') && !isdirectory(expand('~').'/.vim/backups')
   set undofile
 endif
 
-"" Indenting
+" Indenting
 set autoindent
 set smartindent
 set smarttab
@@ -29,8 +30,8 @@ set tabstop=2
 set shiftwidth=2
 
 " Indent with paste
-nnoremap p p=`]<C-o>
-nnoremap P P=`]<C-o>
+nnoremap p p=`]
+nnoremap P P=`]
 
 "Not 100% on what these do
 filetype plugin on
@@ -53,7 +54,7 @@ set wildignore+=*sass-cache*
 set wildignore+=*DS_Store*
 set wildignore+=log/**
 set wildignore+=tmp/**
-set wildignore+=*.png,*.jpg,*.gif
+set wildignore+=*.png,*.jpg,*.gif,*.svg
 
 set scrolloff=8
 set sidescrolloff=15
@@ -72,17 +73,19 @@ nnoremap <silent> ss <C-w>s
 " Easy 'fat' arrows
 imap <c-l> <space>=><space>
 
-"" Searching
+" Searching
 set ignorecase      " Ignore case when searching...
 set smartcase       " ...unless we type a capital
 " // makes the search results not highlighted
 " unless you interact with them again
 nmap <silent> // :nohlsearch<CR>
 
+" Autocomplete preview don't open extra pane
+set completeopt=menu
+
 "This is so 0 takes you to the first character
 "of a line rather than the very start
 nnoremap 0 ^
-nnoremap ^ 0
 
 "Remapping the awkward ctrl+^ to go back to previous file
 nnoremap <C-b> <C-^>
@@ -92,7 +95,7 @@ nnoremap <silent> ,cf :let @* = expand("%:~")<CR>
 
 set clipboard=unnamed
 
-"" Load Vundle Plugins
+" Load Vundle Plugins
 if filereadable(expand("~/.vim/vundles.vim"))
 	source ~/.vim/vundles.vim
 endif
@@ -105,17 +108,15 @@ endfor
 
 nmap <C-t>r <Plug>SetTmuxVars
 
-" vim-rspec mappings
-map <Leader>f :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
-
-"custom.vim is a file where you can add any extra things
-"you want that you don't want version controlled.
+"custom/ is a directory where you can add any files
+"you want that you don't want version controlled,
 "for example what colorscheme you decide to use
-so ~/.vim/custom.vim
+let customvim = '~/.vim/custom'
+for fpath in split(globpath(customvim, '*.vim'), '\n')
+	exe 'source' fpath
+endfor
 
+" Flashes red for if you lost your cursor
 nnoremap <C-p> :call FlashCurrentLine()<CR>
 
 function! FlashCurrentLine()
