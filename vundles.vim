@@ -28,7 +28,6 @@ Plugin 'sheerun/vim-polyglot'
 Plugin 'jtratner/vim-flavored-markdown'
 Plugin 'chrisbra/Colorizer'
 Plugin 'mtscout6/syntastic-local-eslint.vim'
-Plugin 'styled-components/vim-styled-components'
 Plugin 'ycm-core/YouCompleteMe'
 Plugin 'prettier/vim-prettier'
 

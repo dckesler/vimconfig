@@ -6,6 +6,8 @@ set completeopt=menu
 colorscheme gruvbox8
 let g:gruvbox_transp_bg = 1
 
+set formatoptions=tcroqj
+
 map <Leader>w :w<CR>
 nnoremap L J
 
