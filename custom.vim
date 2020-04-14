@@ -18,6 +18,8 @@ nmap U :redo<CR>
 nmap <Leader>j o<Esc>
 nmap <Leader>k O<Esc>
 
+nnoremap <Leader>cd :cd %:p:h<CR>
+
 nnoremap <Leader>tn :tabnew<CR>
 
 nmap <Leader>gs :Gstatus<CR>
