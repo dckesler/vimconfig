@@ -27,7 +27,7 @@ Plugin 'sheerun/vim-polyglot'
 " vim-flavored-markdown helps recognize github markdown styles
 Plugin 'jtratner/vim-flavored-markdown'
 Plugin 'chrisbra/Colorizer'
-Plugin 'mtscout6/syntastic-local-eslint.vim'
+"Plugin 'mtscout6/syntastic-local-eslint.vim'
 Plugin 'ycm-core/YouCompleteMe'
 Plugin 'prettier/vim-prettier'
 
@@ -47,8 +47,6 @@ Plugin 'tomtom/tlib_vim'
 Plugin 'honza/vim-snippets'
 " Plugin 'Lokaltog/vim-easymotion'
 Plugin 'terryma/vim-multiple-cursors'
-" Plugin 'Raimondi/delimitMate'
-"Plugin 'Shougo/deoplete.nvim'
 Plugin 'briandoll/change-inside-surroundings.vim'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'tpope/vim-abolish'
@@ -62,7 +60,12 @@ Plugin 'gregsexton/gitv'
 Plugin 'tpope/vim-git'
 Plugin 'mhinz/vim-signify'
 Plugin 'tpope/vim-fugitive'
-"
+
+" Custom Plugins in ./vundles-custom.vim
+if filereadable(expand('~/.vim/vundles.custom.vim'))
+  so ~/.vim/vundles.custom.vim
+endif
+
 
 Plugin 'tpope/vim-vinegar'
 
