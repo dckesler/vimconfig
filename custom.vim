@@ -2,6 +2,7 @@
 
 set mouse=a
 set background=dark
+set completeopt=menu
 colorscheme gruvbox8
 let g:gruvbox_transp_bg = 1
 

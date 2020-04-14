@@ -18,7 +18,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Utils
 Plugin 'itchyny/lightline.vim'
-Plugin 'xolox/vim-session'
+Plugin 'tpope/vim-obsession'
 Plugin 'xolox/vim-misc'
 
 "" Languages
@@ -27,7 +27,6 @@ Plugin 'sheerun/vim-polyglot'
 " vim-flavored-markdown helps recognize github markdown styles
 Plugin 'jtratner/vim-flavored-markdown'
 Plugin 'chrisbra/Colorizer'
-Plugin 'scrooloose/syntastic.git'
 Plugin 'mtscout6/syntastic-local-eslint.vim'
 Plugin 'styled-components/vim-styled-components'
 Plugin 'ycm-core/YouCompleteMe'
