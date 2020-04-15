@@ -22,7 +22,6 @@ Plugin 'sheerun/vim-polyglot'
 " vim-flavored-markdown helps recognize github markdown styles
 Plugin 'jtratner/vim-flavored-markdown'
 Plugin 'chrisbra/Colorizer'
-Plugin 'sbdchd/neoformat'
 
 "" File Management
 Plugin 'scrooloose/nerdtree'
