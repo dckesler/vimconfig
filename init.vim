@@ -65,10 +65,6 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
-" 'Easier' window splits
-nnoremap <silent> vv <C-w>v
-nnoremap <silent> ss <C-w>s
-
 " Easy 'fat' arrows
 imap <c-l> <space>=><space>
 
@@ -131,5 +127,4 @@ function! s:Repl()
     return "p@=RestoreRegister()\<cr>"
 endfunction
 
-" NB: this supports "rp that replaces the selection by the contents of @r
 vnoremap <silent> <expr> p <sid>Repl()
