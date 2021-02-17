@@ -1,4 +1,3 @@
-" These are native vim settings
 set nocompatible
 set number
 set backspace=indent,eol,start
@@ -11,6 +10,10 @@ let mapleader=","
 set noswapfile
 set nobackup
 set nowb
+
+filetype plugin on
+filetype indent on
+
 syntax on
 
 " Keeps undo history across sessions by storing in a file
@@ -28,10 +31,6 @@ set expandtab
 set softtabstop=2
 set tabstop=2
 set shiftwidth=2
-
-"Not 100% on what these do
-filetype plugin on
-filetype indent on
 
 " Show trailing whitespace as that dot thing
 set list listchars=tab:\ \ ,trail:·
@@ -55,6 +54,8 @@ set wildignore+=*.png,*.jpg,*.gif,*.svg
 set scrolloff=8
 set sidescrolloff=15
 set sidescroll=1
+
+nnoremap p p=`]
 
 " Easier pane navigation
 map <C-j> <C-W>j

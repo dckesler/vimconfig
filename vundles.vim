@@ -31,12 +31,6 @@ Plugin 'vim-scripts/IndexedSearch'
 Plugin 'nelstrom/vim-visual-star-search'
 Plugin 'skwp/greplace.vim'
 
-"" Zen
-Plugin 'garbas/vim-snipmate'
-" I'm not 100% about these next two. They're needed for vim-snipmate
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'honza/vim-snippets'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'Raimondi/delimitMate'
@@ -48,6 +42,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'vim-scripts/camelcasemotion.git'
 Plugin 'vim-scripts/matchit.zip'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'dense-analysis/ale'
 
 "" Git
 Plugin 'gregsexton/gitv'
@@ -57,7 +52,7 @@ Plugin 'tpope/vim-fugitive'
 
 " Custom Plugins in ./vundles-custom.vim
 if filereadable(expand('~/.vim/vundles.custom.vim'))
-  so ~/.vim/vundles.custom.vim
+  source ~/.vim/vundles.custom.vim
 endif
 
 
