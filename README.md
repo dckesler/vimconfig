@@ -1,8 +1,18 @@
 # Current setup for vim and tmux
 
-## Installing
+### Install vim with python3 support
+- Easiest way for mac users is to just `brew install vim`
+- Check `vim --version` afterwards and see that somewhere it says `+python3`
+
+## Installing vimconfig
 - Run `git clone https://github.com/dckesler/vimconfig.git ~/.vim`
 - (Or the git address of your fork if you forked this)
+
+### Ubuntu Note
+Try linuxbrew http://linuxbrew.sh/
+Currently not all the packages can be installed via `apt-get`
+
+### Setup steps
 
 init.vim should be symlinked to .vimrc
 - Run `ln -s ~/.vim/init.vim ~/.vimrc`
@@ -38,44 +48,42 @@ Install your vim plugins
 - Inside of vim type `:PluginInstall`
 - This makes Vundle go through and install all the plugins
 
-## NeoVim
-### Installing neovim - (On Mac)
-- `brew install neovim/neovim/neovim`
+Install YouCompleteMe
+- After running `:PluginInstall` YouCompleteMe will still complain
+- You can follow along the readme [here](https://github.com/ycm-core/YouCompleteMe)
+- Go to the `Installation` at `macOS` or whatever you use. On macOS ignore the part about installing `macvim` though
 
-The command `nvim` should exist now, you could alias `vim` to `nvim` if you want.
+### Custom Vundle Plugins
+- Add the file `~/.vim/vundles.custom.vim`.
+- Add vim plugins like this `Plugin 'gituser/repo-name'`
+- Then run `:PluginInstall`
 
-Now you'll want python3 enabled for neovim to use the autocomplete functionality
-- If you don't have python3 run `brew install python3`
-- You should now have pip3
-- Run `pip3 install neovim`
-- Run the command `:echo has("python3")` inside of neovim
-- If it returns `1` you're in business
-- Now run `:UpdateRemotePlugins` to enable deoplete (the autocomplete plugin)
-- If it returns `0` this page could help https://github.com/zchee/deoplete-jedi/wiki/Setting-up-Python-for-Neovim
+### Custom Vim Stuff
+The directory `custom/` can be filled with any vim files you want and they will all be
+loaded into the vim setup. None of that directory is version controlled.
 
-Now you need neovim to run your vim settings
-- Run `mkdir ~/.config` (Unless you already have said directory)
+## Tmuxifier
+Tmuxifier is a way to have saved tmux window and session layouts (these instructions work for bash or zsh)
+Check out the project here https://github.com/jimeh/tmuxifier with more in depth instructions
+### Installing Tmuxifier
+- `git clone https://github.com/jimeh/tmuxifier.git ~/.vim/tmuxifier`
+Now you need to load the tmuxifier PATH
+- `echo 'export PATH="$HOME/.vim/tmuxifier/bin:$PATH"' >> <your shell configuration file>`
+- `echo 'eval "$(tmuxifier init -)"' >> <your shell configuration file>`
 
-Now symlink a `nvim` directory in here to your `.vim` directory (this repo)
-- Run `ln -s ~/.vim ~/.config/nvim`
+### Adding tmuxifier window layouts
+- Add a file to `~/.vim/tmuxifier/layouts/`
+- For example `touch ~/.vim/tmuxifier/layouts/example.window.sh`
+- Add this code to the file
+```bash
+new_window "example"
+run_cmd "vim"
 
-You may also want to edit your `.gitconfig` to use nvim as your editor
-- Add these lines
+split_v 20
+split_h 50
+split_h 50
+select_pane 2
+split_h 50
 ```
-[core]
-	editor = nvim
-```
-
-### custom.vim
-`custom.vim` is a non-version-controlled file. Add things here you want outside of git.
-Most likely the first things will be your colorscheme.
-`colorscheme <name>`
-
-### ctrl+h tmux bug
-If you're setting up NeoVim on Mac for the first time you should run the commands
-```
-infocmp $TERM | sed 's/kbs=^[hH]/kbs=\\177/' > $TERM.ti
-tic $TERM.ti
-```
-As per https://github.com/neovim/neovim/issues/2048#issuecomment-78045837
-Otherwise `ctrl + h` won't switch between panes in tmux
+- Then inside of tmux run `tmuxifier load-window example`
+- It should start up something with a large pane opened in vim and 4 smaller panes at the bottom
