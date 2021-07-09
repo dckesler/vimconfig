@@ -69,6 +69,7 @@ imap <c-l> <space>=><space>
 " Searching
 set ignorecase      " Ignore case when searching...
 set smartcase       " ...unless we type a capital
+set hlsearch        " Highlight all search hits
 " // makes the search results not highlighted
 " unless you interact with them again
 nmap <silent> // :nohlsearch<CR>

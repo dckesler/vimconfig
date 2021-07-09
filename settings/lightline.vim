@@ -23,9 +23,18 @@ function! MyReadonly()
 	endif
 endfunction
 
+function! LightlineFilename()
+	let root = fnamemodify(get(b:, 'git_dir'), ':h')
+	let path = expand('%:p')
+	if path[:len(root)-1] ==# root
+		return path[len(root)+1:]
+	endif
+	return expand('%')
+endfunction
+
 function! MyFilename()
 	return ('' != MyReadonly() ? MyReadonly() . ' ' : '') .
-				\ ('' != expand('%') ? expand('%') : '[NoName]')
+				\ ('' != LightlineFilename() ? LightlineFilename() : '[NoName]')
 endfunction
 
 " Use status bar even with single buffer
