@@ -37,7 +37,7 @@ filetype plugin on
 filetype indent on
 
 " Show trailing whitespace as that dot thing
-set list listchars=tab:\ \ ,trail:·
+set list listchars=tab:\ \ ,trail:~
 
 set nowrap
 set linebreak

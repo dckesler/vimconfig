@@ -27,10 +27,8 @@ Plugin 'sheerun/vim-polyglot'
 " vim-flavored-markdown helps recognize github markdown styles
 Plugin 'jtratner/vim-flavored-markdown'
 Plugin 'chrisbra/Colorizer'
-Plugin 'scrooloose/syntastic.git'
-"Plugin 'styled-components/vim-styled-components'
 Plugin 'ycm-core/YouCompleteMe'
-Plugin 'prettier/vim-prettier'
+"Plugin 'prettier/vim-prettier'
 
 "" File Management
 "Plugin 'scrooloose/nerdtree'
@@ -41,11 +39,10 @@ Plugin 'nelstrom/vim-visual-star-search'
 Plugin 'skwp/greplace.vim'
 
 "" Zen
-Plugin 'garbas/vim-snipmate'
 " I'm not 100% about these next two. They're needed for vim-snipmate
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
-Plugin 'honza/vim-snippets'
+"Plugin 'honza/vim-snippets'
 " Plugin 'Lokaltog/vim-easymotion'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'briandoll/change-inside-surroundings.vim'

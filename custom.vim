@@ -9,6 +9,11 @@ let g:gruvbox_transp_bg = 1
 map <Leader>w :w<CR>
 nnoremap L J
 
+inoremap <c-l> console.log()<Esc>i
+inoremap <c-d> debugger<Esc>
+
+nmap <Leader>yp :let @+ = expand("%")<cr>
+
 nmap <Space> za
 nnoremap J zj
 nnoremap K zk
@@ -23,6 +28,10 @@ nnoremap <Leader>tn :tabnew<CR>
 nmap <Leader>gs :Gstatus<CR>
 
 nmap <Leader>l :syntax sync fromstart<CR>
+
+nmap <Leader>zi :set foldmethod=indent<CR>
+
+nmap <Leader>jf :%!python3 -m json.tool<CR>
 
 function DiffCurrentQuickfixEntry() abort
   cc
