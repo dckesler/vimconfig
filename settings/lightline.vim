@@ -9,7 +9,7 @@ let g:lightline = {
 			\ },
 			\ 'component_function': {
 			\   'readonly': 'MyReadonly',
-			\   'filename': 'MyFilename',
+			\   'filename': 'MyFilename'
 			\ },
 			\ }
 
@@ -23,19 +23,12 @@ function! MyReadonly()
 	endif
 endfunction
 
-function! LightlineFilename()
-	let root = fnamemodify(get(b:, 'git_dir'), ':h')
-	let path = expand('%:p')
-	if path[:len(root)-1] ==# root
-		return path[len(root)+1:]
-	endif
-	return expand('%')
-endfunction
-
 function! MyFilename()
 	return ('' != MyReadonly() ? MyReadonly() . ' ' : '') .
-				\ ('' != LightlineFilename() ? LightlineFilename() : '[NoName]')
+				\ ('' != expand('%') ? expand('%') : '[No Name]')
 endfunction
 
 " Use status bar even with single buffer
 set laststatus=2
+
+set noshowmode
