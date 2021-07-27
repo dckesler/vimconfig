@@ -63,6 +63,8 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
+imap <C-t> ```
+
 " Easy 'fat' arrows
 imap <c-l> <space>=><space>
 
