@@ -48,10 +48,7 @@ Install your vim plugins
 - Inside of vim type `:PluginInstall`
 - This makes Vundle go through and install all the plugins
 
-Install YouCompleteMe
-- After running `:PluginInstall` YouCompleteMe will still complain
-- You can follow along the readme [here](https://github.com/ycm-core/YouCompleteMe)
-- Go to the `Installation` at `macOS` or whatever you use. On macOS ignore the part about installing `macvim` though
+Install additonal coc extensions via `:CocInstall` as you please
 
 ### Custom Vundle Plugins
 - Add the file `~/.vim/vundles.custom.vim`.

@@ -22,9 +22,11 @@ Plugin 'sheerun/vim-polyglot'
 " vim-flavored-markdown helps recognize github markdown styles
 Plugin 'jtratner/vim-flavored-markdown'
 Plugin 'chrisbra/Colorizer'
+Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 
 "" File Management
-Plugin 'scrooloose/nerdtree'
+Plugin 'preservim/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'junegunn/fzf.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'vim-scripts/IndexedSearch'
@@ -34,7 +36,6 @@ Plugin 'skwp/greplace.vim'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'Raimondi/delimitMate'
-Plugin 'ycm-core/YouCompleteMe'
 Plugin 'briandoll/change-inside-surroundings.vim'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'tpope/vim-abolish'
@@ -42,7 +43,6 @@ Plugin 'tpope/vim-surround'
 Plugin 'vim-scripts/camelcasemotion.git'
 Plugin 'vim-scripts/matchit.zip'
 Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'dense-analysis/ale'
 
 "" Git
 Plugin 'gregsexton/gitv'
