@@ -8,9 +8,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 "" Add vundle packages here
 
-" Run rspec tests directly from vim to tmux!
-"Plugin 'thoughtbot/vim-rspec'
-"Plugin 'jgdavey/tslime.vim'
 Plugin 'tpope/vim-dispatch'
 
 " Vundle loads vundle
@@ -27,24 +24,21 @@ Plugin 'sheerun/vim-polyglot'
 " vim-flavored-markdown helps recognize github markdown styles
 Plugin 'jtratner/vim-flavored-markdown'
 Plugin 'chrisbra/Colorizer'
-Plugin 'ycm-core/YouCompleteMe'
-"Plugin 'prettier/vim-prettier'
+
+Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 
 "" File Management
-"Plugin 'scrooloose/nerdtree'
+Plugin 'preservim/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'junegunn/fzf.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'vim-scripts/IndexedSearch'
 Plugin 'nelstrom/vim-visual-star-search'
 Plugin 'skwp/greplace.vim'
 
-"" Zen
-" I'm not 100% about these next two. They're needed for vim-snipmate
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-"Plugin 'honza/vim-snippets'
-" Plugin 'Lokaltog/vim-easymotion'
+Plugin 'Lokaltog/vim-easymotion'
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'Raimondi/delimitMate'
 Plugin 'briandoll/change-inside-surroundings.vim'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'tpope/vim-abolish'
@@ -58,18 +52,14 @@ Plugin 'gregsexton/gitv'
 Plugin 'tpope/vim-git'
 Plugin 'mhinz/vim-signify'
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-vinegar'
 
 " Custom Plugins in ./vundles-custom.vim
 if filereadable(expand('~/.vim/vundles.custom.vim'))
   so ~/.vim/vundles.custom.vim
 endif
 
-
-Plugin 'tpope/vim-vinegar'
-
 call vundle#end()
-
-
 
 " Required by vundle
 filetype plugin indent on

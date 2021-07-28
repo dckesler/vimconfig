@@ -13,6 +13,11 @@ set nobackup
 set nowb
 syntax on
 
+filetype plugin on
+filetype indent on
+
+syntax on
+
 " Keeps undo history across sessions by storing in a file
 if has('persistent_undo') && !isdirectory(expand('~').'/.vim/backups')
   silent !mkdir ~/.vim/backups > /dev/null 2>&1
@@ -58,6 +63,8 @@ set wildignore+=*.png,*.jpg,*.gif,*.svg
 set scrolloff=8
 set sidescrolloff=15
 set sidescroll=1
+
+nnoremap p p=`]
 
 " Easier pane navigation
 map <C-j> <C-W>j
