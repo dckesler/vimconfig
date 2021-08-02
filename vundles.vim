@@ -35,7 +35,7 @@ Plugin 'skwp/greplace.vim'
 
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'terryma/vim-multiple-cursors'
-Plugin 'Raimondi/delimitMate'
+Plugin 'jiangmiao/auto-pairs'
 Plugin 'briandoll/change-inside-surroundings.vim'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'tpope/vim-abolish'
