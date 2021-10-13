@@ -1,13 +1,13 @@
 .DS_Store
 .init.vim-rplugin~
 .netrwhist
-bundle/*
 custom/*
+plugs
 sessions
 backups
 zshrc
 colors/*
 custom.vim
-vundles.custom.vim
+plugs.custom.vim
 tmuxifier
-*.log
+autoload
