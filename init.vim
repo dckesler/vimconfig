@@ -90,9 +90,9 @@ nnoremap <silent> ,cf :let @* = expand("%:~")<CR>
 
 set clipboard=unnamed
 
-" Load Vundle Plugins
-if filereadable(expand("~/.vim/vundles.vim"))
-	source ~/.vim/vundles.vim
+" Load Plugins
+if filereadable(expand("~/.vim/plugs.vim"))
+	source ~/.vim/plugs.vim
 endif
 
 " Load the settings files for the various plugins
@@ -111,7 +111,7 @@ for fpath in split(globpath(customvim, '*.vim'), '\n')
 	exe 'source' fpath
 endfor
 
-" Flashes red for if you lost your cursor
+" Flashes the line your cursor is on
 nnoremap <C-p> :call FlashCurrentLine()<CR>
 
 function! FlashCurrentLine()
