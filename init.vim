@@ -71,6 +71,7 @@ imap <c-l> <space>=><space>
 " Searching
 set ignorecase      " Ignore case when searching...
 set smartcase       " ...unless we type a capital
+set hlsearch        " Highlight all search hits
 " // makes the search results not highlighted
 " unless you interact with them again
 nmap <silent> // :nohlsearch<CR>
@@ -111,7 +112,10 @@ for fpath in split(globpath(customvim, '*.vim'), '\n')
 	exe 'source' fpath
 endfor
 
-" Flashes the line your cursor is on
+" increase the foldnest level
+set foldnestmax=5
+
+" Flashes red for if you lost your cursor
 nnoremap <C-p> :call FlashCurrentLine()<CR>
 
 function! FlashCurrentLine()

@@ -9,7 +9,7 @@ let g:lightline = {
 			\ },
 			\ 'component_function': {
 			\   'readonly': 'MyReadonly',
-			\   'filename': 'MyFilename',
+			\   'filename': 'MyFilename'
 			\ },
 			\ }
 
@@ -25,8 +25,10 @@ endfunction
 
 function! MyFilename()
 	return ('' != MyReadonly() ? MyReadonly() . ' ' : '') .
-				\ ('' != expand('%') ? expand('%') : '[NoName]')
+				\ ('' != expand('%') ? expand('%') : '[No Name]')
 endfunction
 
 " Use status bar even with single buffer
 set laststatus=2
+
+set noshowmode
