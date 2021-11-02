@@ -29,7 +29,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'vim-scripts/IndexedSearch'
 Plug 'nelstrom/vim-visual-star-search'
 
-Plug 'Lokaltog/vim-easymotion'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-surround'

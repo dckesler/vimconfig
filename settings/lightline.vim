@@ -5,9 +5,10 @@ let g:lightline = {
 			\ 'colorscheme': 'wombat',
 			\ 'active': {
 			\   'left': [ [ 'mode', 'paste' ],
-			\             [ 'readonly', 'filename', 'modified' ] ]
+			\             [ 'cocstatus', 'readonly', 'filename', 'modified' ] ]
 			\ },
 			\ 'component_function': {
+	    \   'cocstatus': 'coc#status',
 			\   'readonly': 'MyReadonly',
 			\   'filename': 'MyFilename'
 			\ },
@@ -32,3 +33,6 @@ endfunction
 set laststatus=2
 
 set noshowmode
+
+" Use autocmd to force lightline update.
+autocmd User CocStatusChange,CocDiagnosticChange call lightline#update()
